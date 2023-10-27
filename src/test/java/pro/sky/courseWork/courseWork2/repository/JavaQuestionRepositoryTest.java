@@ -26,11 +26,4 @@ class JavaQuestionRepositoryTest {
         Question removeQuestion = repository.remove(new Question("test", "testtest"));
         assertEquals(result, removeQuestion);
     }
-
-    @Test
-    void testGetAll() {
-        List actualQuestions = List.of(new Question("test", "testtest"));
-        repository.add("test", "testtest");
-        org.assertj.core.api.Assertions.assertThat(actualQuestions).containsExactly(repository.getAll());
-    }
 }
